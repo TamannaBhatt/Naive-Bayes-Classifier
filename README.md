@@ -25,7 +25,7 @@ We drop the `day` column as it is irrelevant for prediction.
 
 - Calculated **prior probabilities**:  
   \[
-  P(\text{yes}) = \frac{9}{14}, \quad P(\text{no}) = \frac{5}{14}
+  P(yes) = 9/14, P(no) =5/14
   \]
 
 - Used `pd.crosstab()` to manually compute **conditional probabilities** for each feature value.
@@ -33,7 +33,7 @@ We drop the `day` column as it is irrelevant for prediction.
 - Applied Naive Bayes formula to predict the class for a test query:  
   `{outlook=sunny, temperature=hot, humidity=high, wind=weak}`
 
-- Compared \( P(\text{yes}|\text{features}) \) and \( P(\text{no}|\text{features}) \) to make a final prediction.
+- Compared \( P({yes}|{features}) \) and \( P({no}|{features}) \) to make a final prediction.
 
 ---
 
@@ -68,8 +68,12 @@ We drop the `day` column as it is irrelevant for prediction.
 
 Test Query: {'outlook': 'sunny', 'temperature': 'hot', 'humidity': 'high', 'wind': 'weak'}
 
-P(Yes | features): 0.0054  
-P(No | features): 0.0057
+P(Yes | features):  0.010582010582010581
+P(No | features):   0.02742857142857143
+
+Prediction: ❌ No (Don’t Play Tennis)
+
+---
 
 ## 🧑‍🏫 Credits
 
@@ -77,4 +81,3 @@ P(No | features): 0.0057
 > I recreated the logic myself as part of my learning process.
 
 ---
-Prediction: ❌ No (Don’t Play Tennis)
